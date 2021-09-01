@@ -7,7 +7,7 @@ const statusbarheight = 20 // Platform.OS === 'ios' ? 20 : StatusBarManager.HEIG
 
 export const COLORS = {
   // base colors
-  primary: '#00A9A5',
+  primary: '#DA4167',
   secondary: '#383F51',
   tertiary: '#EEEEEE',
   quaternary: '#3C4F76',
