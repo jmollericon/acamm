@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // screens
-import { Welcome, Home } from './src/screens'
+import { Welcome, Register, Home } from './src/screens'
 
 import AppLoading from 'expo-app-loading';
 import { useFonts, Roboto_400Regular, Roboto_700Bold, Roboto_900Black } from '@expo-google-fonts/roboto'
@@ -24,6 +24,7 @@ function App() {
     return (
       <NavigationContainer>
         <Stack.Navigator>
+          <Stack.Screen name="Register" component={Register} options={{ headerShown: false }} />
           <Stack.Screen name="Welcome" component={Welcome} options={{ headerShown: false }} />
           <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
         </Stack.Navigator>
