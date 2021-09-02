@@ -7,6 +7,7 @@ import { COLORS, SIZES } from '../../../constants'
 
 // components
 import TextInputApp from './TextInputApp'
+import RadioItem from './RadioItem'
 
 const Form = () => {
   const searchSubscriber = (values) => {
@@ -55,7 +56,14 @@ const Form = () => {
                 </View>
                 <View style={styles.campoEntrada}>
                   <Text style={styles.texto}>Selecciona tu edad</Text>
-                  
+                  <View style={styles.center}>
+                    <View style={styles.contenedorSeleccionarEdad}>
+                      <RadioItem value="7" />
+                      <RadioItem value="8" />
+                      <RadioItem value="9" />
+                      <RadioItem value="10" />
+                    </View>
+                  </View>
                 </View>
                 <View style={styles.campoEntrada}>
                   <Text style={styles.texto}>Ingrese el nombre de tu mascota</Text>
@@ -73,7 +81,6 @@ const Form = () => {
                   <TouchableHighlight style={styles.boton} onPress={handleSubmit}>
                     <Text style={styles.textoBoton}>REGISTRARSE</Text>
                   </TouchableHighlight>
-
                 </View>
               </View>
             )}
@@ -106,6 +113,15 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     alignContent: 'center'
   },
+  center: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  contenedorSeleccionarEdad: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '80%',
+  },
   contenedorBoton: {
     alignItems: 'center'
   },
@@ -113,7 +129,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.primary,
     width: 176,
     height: 44,
-    borderRadius: 10,
+    borderRadius: SIZES.radius,
     textAlign: 'center',
     justifyContent: 'center'
   },
